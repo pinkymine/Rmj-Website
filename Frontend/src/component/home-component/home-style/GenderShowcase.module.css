@@ -1,0 +1,103 @@
+
+.showcase {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 60px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  /* background-color: #2a1f3d; Dark purple background */
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 500px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 2px solid #ffb6c1; /* Pink border matching the logo */
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.item:hover img {
+  transform: scale(1.05);
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px;
+  background: linear-gradient(transparent, rgba(42, 31, 61, 0.9)); /* Gradient using the dark purple */
+  color: white;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #ffb6c1; /* Pink text color matching logo */
+}
+
+.content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.shopButton {
+  background: #ffb6c1; /* Pink button matching logo */
+  color: #2a1f3d; /* Dark purple text */
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.shopButton:hover {
+  background: #ff9aa9; /* Slightly darker pink on hover */
+  transform: translateY(-3px);
+}
+
+/* Add decorative elements similar to the hanging ornaments */
+.item::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #ffb6c1;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(255, 182, 193, 0.6);
+}
+
+@media (max-width: 768px) {
+  .showcase {
+    grid-template-columns: 1fr;
+  }
+  
+  .item {
+    height: 400px;
+  }
+  
+  .content h2 {
+    font-size: 2rem;
+  }
+  
+  .content p {
+    font-size: 1rem;
+  }
+}

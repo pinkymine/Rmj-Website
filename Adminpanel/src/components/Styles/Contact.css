@@ -1,0 +1,533 @@
+.contact-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #ffe6f0, #f3e8ff);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(255, 192, 203, 0.3);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #cc33a2;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+  }
+  
+  .loading,
+  .no-contacts {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #993366;
+    margin-top: 30px;
+  }
+  
+  .error-container {
+    text-align: center;
+    background-color: #ff4d88;
+    padding: 20px 30px;
+    border-radius: 12px;
+    color: white;
+    max-width: 600px;
+    margin: 30px auto;
+    box-shadow: 0 4px 12px rgba(255, 0, 102, 0.3);
+  }
+  
+  .retry-button {
+    margin-top: 15px;
+    padding: 10px 25px;
+    border: none;
+    background-color: #cc33a2;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .retry-button:hover {
+    background-color: #b30086;
+    transform: scale(1.05);
+  }
+  
+  .contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .contact-header,
+  .contact-row {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1.5fr 3fr 2fr;
+    align-items: center;
+    padding: 14px 20px;
+    border-radius: 12px;
+    background-color: #fdf5ff;
+    box-shadow: 0 2px 8px rgba(204, 51, 162, 0.1);
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+  
+  .contact-header {
+    background-color: #e6ccff;
+    font-weight: bold;
+    font-size: 1.05rem;
+    color: #660066;
+    text-align: center;
+  }
+  
+  .contact-row {
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  .contact-row:hover {
+    background-color: #ffe6f0;
+    transform: scale(1.01);
+  }
+  
+  .contact-row div,
+  .contact-header div {
+    padding: 8px 10px;
+    text-align: center;
+  }
+  
+  .message-cell {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: left;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-header,
+    .contact-row {
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 10px;
+    }
+  
+    .contact-row div,
+    .contact-header div {
+      text-align: left;
+    }
+  
+    .message-cell {
+      grid-column: span 2;
+    }
+  }
+  
+
+
+  .pagination {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .pagination button {
+    background: linear-gradient(to right, #ff66cc, #cc99ff); /* Pink to light purple */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(204, 153, 255, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .pagination button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 105, 180, 0.4);
+  }
+  
+  .pagination button:disabled {
+    background: #e0cce0;
+    cursor: not-allowed;
+    color: #aaa;
+  }
+  
+  .pagination span {
+    font-size: 18px;
+    font-weight: 500;
+    color: #990099;
+    background-color: #fce4ff;
+    padding: 8px 16px;
+    border-radius: 25px;
+    box-shadow: inset 0 0 5px rgba(255, 204, 255, 0.3);
+  }
+  /* Base CSS - keeping your original styles */
+.contact-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 40px;
+  background: linear-gradient(135deg, #ffe6f0, #f3e8ff);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(255, 192, 203, 0.3);
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #cc33a2;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+.loading,
+.no-contacts {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #993366;
+  margin-top: 30px;
+}
+
+.error-container {
+  text-align: center;
+  background-color: #ff4d88;
+  padding: 20px 30px;
+  border-radius: 12px;
+  color: white;
+  max-width: 600px;
+  margin: 30px auto;
+  box-shadow: 0 4px 12px rgba(255, 0, 102, 0.3);
+}
+
+.retry-button {
+  margin-top: 15px;
+  padding: 10px 25px;
+  border: none;
+  background-color: #cc33a2;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.retry-button:hover {
+  background-color: #b30086;
+  transform: scale(1.05);
+}
+
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-header,
+.contact-row {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1.5fr 3fr 2fr;
+  align-items: center;
+  padding: 14px 20px;
+  border-radius: 12px;
+  background-color: #fdf5ff;
+  box-shadow: 0 2px 8px rgba(204, 51, 162, 0.1);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.contact-header {
+  background-color: #e6ccff;
+  font-weight: bold;
+  font-size: 1.05rem;
+  color: #660066;
+  text-align: center;
+}
+
+.contact-row {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.contact-row:hover {
+  background-color: #ffe6f0;
+  transform: scale(1.01);
+}
+
+.contact-row div,
+.contact-header div {
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.message-cell {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+.pagination {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  background: linear-gradient(to right, #ff66cc, #cc99ff); /* Pink to light purple */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(204, 153, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 105, 180, 0.4);
+}
+
+.pagination button:disabled {
+  background: #e0cce0;
+  cursor: not-allowed;
+  color: #aaa;
+}
+
+.pagination span {
+  font-size: 18px;
+  font-weight: 500;
+  color: #990099;
+  background-color: #fce4ff;
+  padding: 8px 16px;
+  border-radius: 25px;
+  box-shadow: inset 0 0 5px rgba(255, 204, 255, 0.3);
+}
+
+/* Enhanced Media Queries */
+
+/* Large Desktop (1200px and above) - default styles apply */
+
+/* Medium Desktop and Laptop (992px - 1199px) */
+@media (max-width: 1199px) {
+  .contact-container {
+    max-width: 95%;
+    margin: 40px auto;
+    padding: 35px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 35px;
+  }
+  
+  .contact-header, 
+  .contact-row {
+    grid-template-columns: 1.5fr 1.5fr 1.5fr 2.5fr 1.5fr;
+  }
+}
+
+/* Tablet and Small Laptop (768px - 991px) */
+@media (max-width: 991px) {
+  .contact-container {
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 16px;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .loading,
+  .no-contacts {
+    font-size: 1.2rem;
+  }
+  
+  .error-container {
+    padding: 18px 25px;
+    max-width: 90%;
+  }
+  
+  .contact-header, 
+  .contact-row {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .contact-header {
+    font-size: 1rem;
+  }
+  
+  .pagination {
+    gap: 12px;
+  }
+  
+  .pagination button {
+    padding: 8px 18px;
+    font-size: 15px;
+  }
+  
+  .pagination span {
+    font-size: 16px;
+    padding: 7px 14px;
+  }
+}
+
+/* Mobile (576px - 767px) */
+@media (max-width: 767px) {
+  .contact-container {
+    margin: 25px auto;
+    padding: 25px 20px;
+    border-radius: 15px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+  
+  .error-container {
+    padding: 15px 20px;
+  }
+  
+  .retry-button {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .contact-header,
+  .contact-row {
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 10px;
+    padding: 12px;
+  }
+  
+  .contact-row div,
+  .contact-header div {
+    text-align: left;
+    padding: 6px 8px;
+  }
+  
+  .message-cell {
+    grid-column: span 2;
+  }
+  
+  /* Add column labels for mobile */
+  .contact-row div::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+    color: #993366;
+    font-size: 0.8rem;
+  }
+  
+  .pagination {
+    margin-top: 25px;
+    gap: 10px;
+  }
+  
+  .pagination button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  
+  .pagination span {
+    font-size: 15px;
+    padding: 6px 12px;
+  }
+}
+
+/* Small Mobile (up to 575px) */
+@media (max-width: 575px) {
+  .contact-container {
+    margin: 15px auto;
+    padding: 20px 15px;
+    border-radius: 12px;
+  }
+  
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  
+  .loading,
+  .no-contacts {
+    font-size: 1.1rem;
+    margin-top: 20px;
+  }
+  
+  .error-container {
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px auto;
+  }
+  
+  .contact-grid {
+    gap: 12px;
+  }
+  
+  .contact-header {
+    font-size: 0.9rem;
+  }
+  
+  .contact-row {
+    font-size: 0.85rem;
+  }
+  
+  .contact-header,
+  .contact-row {
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  .pagination {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    width: 80%;
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
+
+/* Extra Small Mobile (up to 375px) */
+@media (max-width: 375px) {
+  .contact-container {
+    padding: 15px 10px;
+  }
+  
+  h1 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+  
+  .contact-header,
+  .contact-row {
+    padding: 8px;
+  }
+  
+  .retry-button {
+    padding: 7px 15px;
+    font-size: 0.85rem;
+  }
+  
+  .pagination button {
+    width: 90%;
+    padding: 7px 12px;
+    font-size: 13px;
+  }
+  
+  .pagination span {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+}

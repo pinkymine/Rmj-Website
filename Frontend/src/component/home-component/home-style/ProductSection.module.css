@@ -1,0 +1,105 @@
+.products {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #2a1f3d; /* Dark purple background */
+}
+
+.products h2 {
+  color: #ffb6c1; /* Pink color from logo */
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.product {
+  text-align: center;
+  position: relative;
+}
+
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #ffb6c1; /* Pink border */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.product:hover img {
+  transform: scale(1.05);
+}
+
+/* Removed overlay and addToCart styles */
+
+.product h3 {
+  color: #ffb6c1; /* Pink text */
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+}
+
+.price {
+  color: white; /* White text for better contrast */
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.seeMore {
+  background: #ffb6c1; /* Pink button */
+  color: #2a1f3d; /* Dark purple text */
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.seeMore:hover {
+  background: #ff9aa9; /* Darker pink on hover */
+  transform: translateY(-3px);
+}
+
+/* Decorative elements inspired by the hanging ornaments */
+.product::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #ffb6c1;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .products h2 {
+    font-size: 2rem;
+  }
+    
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+    
+  .imageWrapper img {
+    height: 200px;
+  }
+}

@@ -1,0 +1,112 @@
+.priceRange {
+  padding: 60px 20px;
+  text-align: center;
+  /* background: #2a1f3d; Dark purple background */
+}
+
+.priceRange h2 {
+  color: #ffb6c1; /* Pink color from logo */
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.priceCard {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 300px;
+  cursor: pointer;
+  border: 2px solid #ffb6c1; /* Pink border */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.priceCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.priceCard:hover img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(42, 31, 61, 0.7); /* Dark purple overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.priceCard:hover .overlay {
+  background: rgba(255, 182, 193, 0.7); /* Pink overlay on hover */
+}
+
+.overlay h3 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.shopButton {
+  background: white;
+  color: #2a1f3d; /* Dark purple text */
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.shopButton:hover {
+  background: #2a1f3d; /* Dark purple background */
+  color: #ffb6c1; /* Pink text */
+  transform: translateY(-3px);
+}
+
+/* Decorative hanging elements */
+.priceCard::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #ffb6c1;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0 0 8px rgba(255, 182, 193, 0.8);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .priceRange h2 {
+    font-size: 2rem;
+  }
+  
+  .overlay h3 {
+    font-size: 1.5rem;
+  }
+}

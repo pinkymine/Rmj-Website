@@ -1,0 +1,131 @@
+.contact {
+  padding: 60px 20px;
+  background: #2a1e47; /* Dark purple background */
+  background-image: linear-gradient(rgba(42, 30, 71, 0.97), rgba(42, 30, 71, 0.97))
+                   /* url('dots-pattern.png'); Adding subtle dot pattern like in the image */
+}
+
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content h2 {
+  color: #ffb6c1; /* Pink color similar to the logo */
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.content p {
+  color: #ffffff; /* White text */
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.form {
+  text-align: left;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup input, .formGroup textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ffb6c1; /* Pink border */
+  background-color: rgba(255, 255, 255, 0.05); /* Slightly transparent input */
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #ffffff; /* White text */
+  transition: border-color 0.3s;
+}
+
+.formGroup input:focus, .formGroup textarea:focus {
+  outline: none;
+  border-color: #ffffff; /* White border on focus */
+  box-shadow: 0 0 5px rgba(255, 182, 193, 0.5); /* Soft pink glow */
+}
+
+.formGroup textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.formGroup label {
+  color: #ffb6c1; /* Pink label text */
+  margin-bottom: 5px;
+  display: block;
+}
+
+.submitButton {
+  width: 100%;
+  background: #ffb6c1; /* Pink button */
+  color: #2a1e47; /* Dark purple text */
+  border: none;
+  padding: 15px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-weight: bold;
+}
+
+.submitButton:hover {
+  background: #ffffff; /* White on hover */
+  color: #2a1e47; /* Keep dark purple text */
+}
+
+.successMessage {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffb6c1; /* Pink text */
+  border: 1px solid #ffb6c1;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Decorative elements similar to the hanging ornaments */
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  /* background-image: url('ornaments.png'); You would need to create this image */
+  background-repeat: repeat-x;
+  background-position: center top;
+}
+
+@media (max-width: 768px) {
+  .content h2 {
+    font-size: 2rem;
+  }
+  
+  .content p {
+    font-size: 1rem;
+  }
+}
+
+.successMessage {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.errorMessage {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  margin-top: 15px;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+}

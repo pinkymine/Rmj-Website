@@ -1,0 +1,268 @@
+/* styles.css */
+* {
+  box-sizing: border-box;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 70vh;
+  padding: 20px;
+  margin-top: 120px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 189, 196, 0.3);
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: #231942;
+}
+
+.reset-description {
+  margin-bottom: 24px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #f0e6ff;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+  border-color: #ffbdc4;
+  box-shadow: 0 0 0 2px rgba(255, 189, 196, 0.2);
+}
+
+input::placeholder {
+  transition: opacity 0.3s, transform 0.3s;
+  color: #999;
+}
+
+input:focus::placeholder {
+  opacity: 0.5;
+  transform: translateX(5px);
+}
+
+.input-error {
+  border-color: #ff5c5c !important;
+  background-color: rgba(255, 92, 92, 0.05);
+}
+
+.error-text {
+  color: #ff5c5c;
+  font-size: 0.85rem;
+  margin-top: 6px;
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.btn-primary {
+  background-color: #ffbdc4;
+  color: #231942;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover {
+  background-color: #ff9aad;
+  transform: translateY(-2px);
+}
+
+.btn-primary:disabled {
+  background-color: #f0e6ff;
+  color: #999;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: transform 0.6s;
+  transform: skewX(-15deg);
+}
+
+.btn-primary:hover::after {
+  transform: translateX(200%);
+}
+
+.forgot-password, .create-account, .cancel {
+  margin: 16px 0;
+}
+
+.forgot-password a, .create-account a, .cancel a {
+  color: #ffbdc4;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+  position: relative;
+  display: inline-block;
+}
+
+.forgot-password a:hover, .create-account a:hover, .cancel a:hover {
+  color: #ff9aad;
+}
+
+.forgot-password a::after, .create-account a::after, .cancel a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #ff9aad;
+  transition: width 0.3s;
+}
+
+.forgot-password a:hover::after, .create-account a:hover::after, .cancel a:hover::after {
+  width: 100%;
+}
+
+/* Message styling */
+.message {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  animation: slideDown 0.5s ease-out;
+}
+
+.message-content {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
+.message.success .message-content {
+  background-color: rgba(72, 199, 142, 0.15);
+  border-left: 4px solid #48c78e;
+}
+
+.message.error .message-content {
+  background-color: rgba(255, 92, 92, 0.15);
+  border-left: 4px solid #ff5c5c;
+}
+
+.message-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.icon-success {
+  color: #48c78e;
+  font-size: 16px;
+}
+
+.icon-error {
+  color: #ff5c5c;
+  font-size: 16px;
+}
+
+.message-text {
+  color: #333;
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translateX(-1px);
+  }
+  20%, 80% {
+    transform: translateX(2px);
+  }
+  30%, 50%, 70% {
+    transform: translateX(-3px);
+  }
+  40%, 60% {
+    transform: translateX(3px);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+  
+  .form-container {
+    padding: 20px 15px;
+  }
+  
+  .btn-primary {
+    padding: 10px 20px;
+  }
+  
+  .message {
+    max-width: 90%;
+  }
+}

@@ -1,0 +1,547 @@
+/* Women's Gold Jewelry CSS */
+body {
+  margin-top: 200px;
+}
+
+.womens-jewelry-listing {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #231942;
+  background-color: #fff;
+}
+
+.womens-jewelry-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.womens-jewelry-header h1 {
+  font-size: 36px;
+  color: #231942;
+  margin: 0;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.womens-jewelry-subtitle {
+  font-size: 16px;
+  color: #ffbdc4;
+  margin-top: 10px;
+}
+
+.womens-jewelry-banner {
+  background: linear-gradient(135deg, #ffffff 0%, #f9f3ff 100%);
+  padding: 40px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  border: 1px solid rgba(255, 189, 196, 0.3);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.womens-jewelry-banner h2 {
+  font-size: 28px;
+  margin: 0 0 10px 0;
+  color: #231942;
+}
+
+.womens-jewelry-banner p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #231942;
+}
+
+.womens-jewelry-shop-now-btn {
+  background: #ffbdc4;
+  color: #231942;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.womens-jewelry-shop-now-btn:hover {
+  background: #ff9aad;
+  transform: translateY(-2px);
+}
+
+.womens-jewelry-filter-sort-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #f0e6ff;
+  box-shadow: 0 2px 8px rgba(35, 25, 66, 0.05);
+}
+
+.womens-jewelry-filters {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.womens-jewelry-filters span,
+.womens-jewelry-sort span {
+  color: #231942;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.womens-jewelry-filter-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.womens-jewelry-filter-btn {
+  background: #ffffff;
+  border: 1px solid #ffbdc4;
+  padding: 10px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s;
+  color: #231942;
+}
+
+.womens-jewelry-filter-btn:hover {
+  border-color: #ff9aad;
+  color: #ff9aad;
+  background: #f9f3ff;
+}
+
+.womens-jewelry-arrow {
+  font-size: 10px;
+  transition: transform 0.3s;
+  color: #ffbdc4;
+}
+
+.womens-jewelry-arrow.open {
+  transform: rotate(180deg);
+}
+
+.womens-jewelry-dropdown-content {
+  position: absolute;
+  z-index: 1;
+  background: #ffffff;
+  border: 1px solid #ffbdc4;
+  border-radius: 8px;
+  min-width: 220px;
+  padding: 15px;
+  margin-top: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.womens-jewelry-radio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  font-size: 14px;
+  transition: color 0.3s;
+  color: #231942;
+}
+
+.womens-jewelry-radio:hover {
+  color: #ff9aad;
+}
+
+.womens-jewelry-radio input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #ffbdc4;
+}
+
+.womens-jewelry-price-range {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.womens-jewelry-price-range input[type="range"] {
+  width: 100%;
+  accent-color: #ffbdc4;
+}
+
+.womens-jewelry-price-inputs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.womens-jewelry-price-inputs input {
+  width: 80px;
+  padding: 8px;
+  border: 1px solid #ffbdc4;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #231942;
+  background: #ffffff;
+}
+
+.womens-jewelry-price-inputs span {
+  color: #231942;
+}
+
+.womens-jewelry-sort {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.womens-jewelry-sort-dropdown {
+  padding: 10px;
+  border: 1px solid #ffbdc4;
+  border-radius: 25px;
+  background-color: #ffffff;
+  min-width: 200px;
+  font-size: 14px;
+  outline: none;
+  color: #231942;
+}
+
+.womens-jewelry-product-count {
+  color: #231942;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.womens-jewelry-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.womens-jewelry-product-card {
+  background: #ffffff;
+  border: 1px solid #f0e6ff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.womens-jewelry-product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(255, 189, 196, 0.15);
+  border-color: #ffbdc4;
+}
+
+.womens-jewelry-product-image {
+  position: relative;
+  padding-top: 100%;
+  background: #f9f3ff;
+  overflow: hidden;
+}
+
+.womens-jewelry-product-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.womens-jewelry-product-card:hover.womens-jewelry-product-image img {
+  transform: scale(1.05);
+}
+
+.womens-jewelry-product-info {
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #ffffff, #f9f3ff);
+}
+
+.womens-jewelry-product-info h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #231942;
+  margin-bottom: 8px;
+}
+
+.womens-jewelry-description {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 12px;
+  min-height: 40px;
+}
+
+.womens-jewelry-price {
+  color: #231942;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 0 15px 0;
+}
+
+.womens-jewelry-add-to-cart {
+  background: transparent;
+  border: 1px solid #ffbdc4;
+  color: #231942;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+  font-weight: 500;
+}
+
+.womens-jewelry-add-to-cart:hover {
+  background: linear-gradient(135deg, #ffbdc4 0%, #ff9aad 100%);
+  color: #fff;
+  border-color: transparent;
+}
+
+.womens-jewelry-promotion-banner {
+  background: linear-gradient(135deg, #231942 0%, #342056 100%);
+  color: #fff;
+  padding: 18px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  letter-spacing: 1px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.womens-jewelry-features {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.womens-jewelry-feature {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  transition: transform 0.3s;
+  border: 1px solid rgba(255, 189, 196, 0.3);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.womens-jewelry-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 189, 196, 0.2);
+  border-color: #ffbdc4;
+}
+
+.womens-jewelry-feature-icon {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #ffbdc4;
+}
+
+.womens-jewelry-feature-text {
+  font-size: 16px;
+  color: #231942;
+  font-weight: 500;
+}
+
+.womens-jewelry-testimonial {
+  background: linear-gradient(135deg, #f9f3ff 0%, #fff 100%);
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 40px;
+  border: 1px solid rgba(255, 189, 196, 0.3);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.womens-jewelry-testimonial-text {
+  font-size: 18px;
+  font-style: italic;
+  color: #231942;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.womens-jewelry-testimonial-author {
+  font-weight: bold;
+  color: #ffbdc4;
+}
+
+.womens-jewelry-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  font-size: 18px;
+  color: #231942;
+  background: #f9f3ff;
+  border-radius: 8px;
+}
+
+/* Added fade-in animation */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Media Query - Updated for 2x2 Grid */
+@media (max-width: 768px) {
+  .womens-jewelry-filter-sort-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .womens-jewelry-filters {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .womens-jewelry-sort {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .womens-jewelry-product-count {
+    width: 100%;
+  }
+  
+  .womens-jewelry-banner {
+    padding: 30px 20px;
+  }
+  
+  /* Updated product grid for 2x2 layout on mobile */
+  .womens-jewelry-product-grid {
+    grid-template-columns: 1fr 1fr; /* Exactly 2 columns */
+    gap: 15px; /* Reduced gap for mobile */
+    margin-bottom: 40px;
+  }
+  
+  /* Ensure product cards fit well in 2 columns */
+  .womens-jewelry-product-card {
+    min-width: 0; /* Allow cards to shrink */
+    width: 100%;
+  }
+  
+  /* Adjust product info padding for mobile */
+  .womens-jewelry-product-info {
+    padding: 15px 10px;
+  }
+  
+  /* Adjust font sizes for better mobile experience */
+  .womens-jewelry-product-info h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+  
+  .womens-jewelry-description {
+    font-size: 12px;
+    margin-bottom: 10px;
+    min-height: 32px;
+  }
+  
+  .womens-jewelry-price {
+    font-size: 16px;
+    margin: 0 0 12px 0;
+  }
+  
+  .womens-jewelry-add-to-cart {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  
+  .womens-jewelry-dropdown-content {
+    position: absolute;
+    width: 100%;
+    min-width: 180px;
+    left: 0;
+    right: 0;
+  }
+  
+  .womens-jewelry-filter-dropdown {
+    position: relative;
+    width: 100%;
+  }
+  
+  .womens-jewelry-filter-btn {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  /* Additional mobile optimizations */
+  .womens-jewelry-listing {
+    padding: 15px;
+  }
+  
+  .womens-jewelry-header h1 {
+    font-size: 28px;
+  }
+  
+  .womens-jewelry-features {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .womens-jewelry-feature {
+    min-width: 100%;
+  }
+}
+
+/* For very small screens (phones in portrait) */
+@media (max-width: 480px) {
+  .womens-jewelry-product-grid {
+    gap: 10px;
+  }
+  
+  .womens-jewelry-product-info {
+    padding: 12px 8px;
+  }
+  
+  .womens-jewelry-product-info h3 {
+    font-size: 14px;
+  }
+  
+  .womens-jewelry-description {
+    font-size: 11px;
+    min-height: 28px;
+  }
+  
+  .womens-jewelry-price {
+    font-size: 14px;
+  }
+  
+  .womens-jewelry-add-to-cart {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+}
+
+
+

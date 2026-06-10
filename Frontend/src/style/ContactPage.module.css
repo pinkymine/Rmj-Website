@@ -1,0 +1,396 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  color: #231942;
+  margin-top: 250px;
+  background-color: #fff;
+}
+
+.contactSection,
+.locationSection {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #231942;
+}
+
+.contactDesc {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.contactForm {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.formRow {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.formInput,
+.formTextarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #f0e6ff;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  border-color: #ffbdc4;
+  box-shadow: 0 0 0 2px rgba(255, 189, 196, 0.2);
+  outline: none;
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitButton {
+  background-color: #ffbdc4;
+  color: #231942;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.submitButton:hover {
+  background-color: #ff9aad;
+  transform: translateY(-2px);
+}
+
+.storeInfoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f9f3ff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 189, 196, 0.3);
+}
+
+.storeInfo {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.storeInfo h3 {
+  font-size: 18px;
+  margin: 20px 0 5px;
+  color: #231942;
+}
+
+.storeInfo p {
+  margin: 5px 0;
+  line-height: 1.5;
+  color: #231942;
+}
+
+.highlight {
+  color: #ffbdc4;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.highlight:hover {
+  color: #ff9aad;
+  text-decoration: underline;
+}
+
+.mapContainer {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mapImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.benefitsSection {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 50px 0;
+  padding: 20px 0;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 189, 196, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.benefit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+  width: 180px;
+}
+
+.iconContainer {
+  width: 60px;
+  height: 60px;
+  background-color: #ffbdc4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  color: #231942;
+  font-size: 24px;
+}
+
+.benefit p {
+  font-weight: 500;
+  color: #231942;
+}
+
+.qualityAssurance {
+  background-color: #231942;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin: 30px 0;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .storeInfoContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .storeInfo {
+    width: 45%;
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .mapContainer {
+    width: 50%;
+  }
+
+  .formRow {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 767px) {
+  .container{
+    margin-top: -80px;
+  }
+  .formRow {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+  }
+
+  .benefitsSection {
+    padding: 10px 0;
+  }
+
+  .benefit {
+    width: 150px;
+    margin: 10px;
+  }
+
+  .iconContainer {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 24px;
+  }
+
+  .contactDesc {
+    font-size: 14px;
+  }
+
+  .benefit {
+    width: 120px;
+    margin: 5px;
+  }
+
+  .iconContainer {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .storeInfoContainer {
+    padding: 20px 15px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.highlight {
+  background: linear-gradient(90deg, #ffbdc4, #ff9aad, #ffbdc4);
+  background-size: 200% 100%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 3s infinite;
+  display: inline-block;
+}
+
+.formInput::placeholder,
+.formTextarea::placeholder {
+  transition: opacity 0.3s, transform 0.3s;
+  color: #999;
+}
+
+.formInput:focus::placeholder,
+.formTextarea:focus::placeholder {
+  opacity: 0.5;
+  transform: translateX(5px);
+}
+
+.submitButton {
+  position: relative;
+  overflow: hidden;
+}
+
+.submitButton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: transform 0.6s;
+  transform: skewX(-15deg);
+}
+
+.submitButton:hover::after {
+  transform: translateX(200%);
+}
+
+.mapContainer {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.mapContainer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add these styles to your existing ContactPage.module.css file */
+
+.successMessage {
+  background-color: #e6f7e6;
+  color: #2e7d32;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  text-align: center;
+  border-left: 4px solid #2e7d32;
+}
+
+.errorMessage {
+  background-color: #fdeded;
+  color: #d32f2f;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  text-align: center;
+  border-left: 4px solid #d32f2f;
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

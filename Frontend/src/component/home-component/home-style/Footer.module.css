@@ -1,0 +1,156 @@
+.footer {
+  background: #000000; /* Dark background */
+  color: white;
+  padding: 60px 20px 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.column h3 {
+  color: #ffb6c1; /* Pink color like the logo */
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.column p {
+  color: #ffffff; /* White text */
+  line-height: 1.6;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.column ul li {
+  margin-bottom: 10px;
+}
+
+.column ul li a {
+  color: #ffffff; /* White text */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.column ul li a:hover {
+  color: #ffb6c1; /* Pink color on hover */
+}
+
+.newsletter {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ffb6c1; /* Pink border */
+  background-color: rgba(255, 255, 255, 0.05); /* Slightly transparent input */
+  border-radius: 5px;
+  color: #ffffff; /* White text */
+}
+
+.newsletter button {
+  background: #ffb6c1; /* Pink button */
+  color: #2a1e47; /* Dark purple text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-weight: bold;
+}
+
+.newsletter button:hover {
+  background: #ffffff; /* White on hover */
+  color: #2a1e47; /* Keep dark purple text */
+}
+
+/* Play Store Section */
+.playstore {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 182, 193, 0.3); /* Light pink border */
+}
+
+.playstore p {
+  margin-bottom: 10px;
+  color: #ffb6c1; /* Pink color */
+  font-weight: bold;
+}
+
+.playstoreImage {
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.playstoreImage:hover {
+  transform: scale(1.05);
+}
+
+.bottom {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 182, 193, 0.3); /* Light pink border */
+  text-align: center;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.social a {
+  color: #ffb6c1; /* Pink social icons */
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.social a:hover {
+  color: #ffffff; /* White on hover */
+}
+
+.copyright {
+  color: #ffffff; /* White text */
+  font-size: 0.9rem;
+}
+
+/* Decorative elements at the bottom */
+.footer::after {
+  content: '';
+  display: block;
+  height: 40px;
+  /* background-image: url('bunny-decoration.png'); You would need this image */
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .newsletter {
+    flex-direction: column;
+  }
+  
+  .newsletter button {
+    width: 100%;
+  }
+  
+  .playstoreImage {
+    height: 50px;
+  }
+}

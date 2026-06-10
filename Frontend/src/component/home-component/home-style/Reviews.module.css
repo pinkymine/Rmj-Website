@@ -1,0 +1,252 @@
+.reviews {
+  padding: 60px 20px;
+  /* background: #2a1f3d; Dark purple background */
+  text-align: center;
+}
+
+.reviews h2 {
+  color: #ffb6c1; /* Pink color from logo */
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.reviewCard {
+  background: #3a2d4d; /* Slightly lighter purple */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin: 0 60px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid #ffb6c1; /* Pink border */
+  position: relative;
+}
+
+/* Decorative elements inspired by the hanging ornaments */
+.reviewCard::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #ffb6c1;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0 0 8px rgba(255, 182, 193, 0.6);
+}
+
+.stars {
+  margin-bottom: 20px;
+}
+
+.star {
+  color: #ffb6c1; /* Pink stars */
+  font-size: 24px;
+  margin: 0 2px;
+}
+
+.comment {
+  font-size: 1.1rem;
+  color: white; /* White text */
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.name {
+  color: #ffb6c1; /* Pink text */
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.date {
+  color: #d6d6d6; /* Light gray text */
+  font-size: 0.9rem;
+}
+
+.navButton {
+  background: rgba(255, 182, 193, 0.7); /* Pink buttons */
+  color: #2a1f3d; /* Dark purple text */
+  border: none;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  border-radius: 50%;
+}
+
+.navButton:hover {
+  background: rgba(255, 182, 193, 0.9); /* Darker pink */
+  transform: scale(1.1);
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #3a2d4d; /* Slightly lighter purple */
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  border: 1px solid #ffb6c1; /* Pink border */
+}
+
+.dot.active {
+  background: #ffb6c1; /* Pink active dot */
+  transform: scale(1.2);
+}
+
+/* Video Section Styles */
+.videoSection {
+  margin-top: 80px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.videoHeading {
+  color: #ffb6c1; /* Pink color from logo */
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.videoGrid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.videoCard {
+  width: 300px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.videoCard:hover {
+  transform: scale(1.05);
+}
+
+.videoThumbnail {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #ffb6c1; /* Pink border */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.videoThumbnail img {
+  width: 100%;
+  display: block;
+}
+
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 182, 193, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2a1f3d;
+  font-size: 24px;
+  transition: background 0.3s;
+}
+
+.videoCard:hover .playButton {
+  background: rgba(255, 182, 193, 1);
+}
+
+.videoCard h4 {
+  color: white;
+  margin-top: 15px;
+  font-size: 1.1rem;
+}
+
+/* New inline video styles */
+.activeVideoContainer {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #ffb6c1;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.inlineVideo {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.videoControls {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.muteButton {
+  background: rgba(255, 182, 193, 0.8);
+  color: #2a1f3d;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.muteButton:hover {
+  background: rgba(255, 182, 193, 1);
+}
+
+@media (max-width: 768px) {
+  .reviews h2 {
+    font-size: 2rem;
+  }
+  
+  .reviewCard {
+    padding: 20px;
+    margin: 0 40px;
+  }
+  
+  .comment {
+    font-size: 1rem;
+  }
+  
+  .videoGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
